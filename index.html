@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<h1> Idea Box </h1>
+		<div class="content">
+			<form id="add-idea">
+				<input type="text" name="idea" id="idea" placeholder="idea">
+				<input type="text" name="category" id="category" placeholder="category">
+				<!-- a button's type is submit by default-->
+				<button type="submit">Idea ++</button>
+			</form>
+			<ul id="ideas-list">
+			</ul>
+		</div>
+
+
+		<script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-firestore.js"></script>
+
+		<script>
+			// Your web app's Firebase configuration
+			var firebaseConfig = {
+				apiKey: "AIzaSyC1hVtGtV-nI5YDkkOfujejsb04ZgEgwwI",
+				authDomain: "idea-box-web.firebaseapp.com",
+				databaseURL: "https://idea-box-web.firebaseio.com",
+				projectId: "idea-box-web",
+				storageBucket: "idea-box-web.appspot.com",
+				messagingSenderId: "487267510108",
+				appId: "1:487267510108:web:706a159b38e870bf5c8399"
+			};
+			// Initialize Firebase
+			firebase.initializeApp(firebaseConfig);
+			const db = firebase.firestore();
+
+		</script>
+
+
+		<script src="app.js"></script>
+	</body>
+</html>
